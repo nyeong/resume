@@ -19,8 +19,7 @@ jobs:
         with:
           source_file: main.typ
           options: |
-            --font-path
-            fonts
+            --font-path fonts
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
