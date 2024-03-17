@@ -14,12 +14,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build Typst
-        uses: lvignoli/typst-action@main
-        with:
-          source_file: main.typ
-          options: |
-            --font-path fonts
+      - name: Set up Typst
+        uses: typst-community/setup-typst@v3
+
+      - name: Run Typst
+        run: typst compile main.typ --font-path fonts
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
