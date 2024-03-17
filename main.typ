@@ -116,8 +116,8 @@
 == 기술 스택
 
 #skill(dic:(
-  개발: "TypeScript/Node.js, MySQL, Redis, Remeda, FP, React",
-  인프라: "AWS, ELB, RDS(MySQL), ElastiCache(Redis), S3, CloudFront, CodePipeline",
+  개발: "TypeScript/Node.js, Express, MySQL, Redis, Remeda, FP, React",
+  인프라: "AWS, ELB, EC2, RDS(MySQL), ElastiCache(Redis), S3, CloudFront, CodePipeline",
   관심: "TypeClass, Programing Language Theory, TDD, 조직 관리",
 ))
 
@@ -132,7 +132,7 @@
     - Node.js, express를 이용한 API 개발, AWS를 이용한 인프라 운영
     - 안정/효율적인 인프라 운영을 위한 메트릭 선정 및 Datadog 대시보드 제작
     - 메트릭 분석을 통하여 EC2 인스턴스 수 20% 감소, RDS 비용 10% 감소
-    - 타입을 활용한 내부 라이브러리 개선을 통해 개발 경험 향상, 속도 단축
+    - 타입을 활용한 내부 라이브러리 개선을 통해 개발 경험 향상, 개발 속도 단축
     - 원스토어 출시, xsolla를 활용한 웹샵 출시
   ]
 )
@@ -142,7 +142,7 @@
 #opensource(
   name: link("https://annyeong.me/nth-week-today/")[오늘은 몇 주차],
 )[
-  - 오늘이 올해의 몇 주차인지 알려주는 간단한 웹 사이트
+  - 오늘이 올해의 몇 주차인지 알려주는 웹 서비스
   - 표준(ISO 8601)에 근거하여 #link("https://github.com/nyeong/hanassig/blob/markdown-backup/notes/nth-week-today.md")[주수를 계산하는 알고리즘 구현]
   - 관련 키워드 검색 1위, 월 2K+ 달성
 ]
