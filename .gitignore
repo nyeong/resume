@@ -1,0 +1,27 @@
+# Typst output files
+*.pdf
+main.pdf
+resume.pdf
+
+# Nix
+result
+result-*
+
+# direnv
+.direnv/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

@@ -17,10 +17,13 @@ jobs:
       - name: Set up Typst
         uses: typst-community/setup-typst@v3
 
-      - name: Run Typst
-        run: typst compile main.typ --font-path fonts
+      - name: Build Korean Resume
+        run: typst compile ko/main.typ --font-path fonts resume-ko.pdf
 
-      - name: Upload PDF file
+      - name: Build English Resume  
+        run: typst compile en/main.typ --font-path fonts resume-en.pdf
+
+      - name: Upload PDF files
         uses: actions/upload-artifact@v4
         with:
           name: PDF
@@ -31,4 +34,6 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           name: "${{ github.ref_name }}"
-          files: main.pdf
+          files: |
+            resume-ko.pdf
+            resume-en.pdf
