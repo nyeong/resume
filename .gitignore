@@ -1,7 +1,5 @@
 # Typst output files
 *.pdf
-main.pdf
-resume.pdf
 
 # Nix
 result

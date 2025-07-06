@@ -21,10 +21,10 @@
           shellHook = ''
             echo "Resume development environment"
             echo "Available commands:"
-            echo "  typst compile ko/main.typ --font-path fonts    # Compile Korean resume"
-            echo "  typst compile en/main.typ --font-path fonts    # Compile English resume"
-            echo "  typst watch ko/main.typ --font-path fonts      # Watch Korean resume"
-            echo "  typst watch en/main.typ --font-path fonts      # Watch English resume"
+            echo "  typst compile src/ko.typ --font-path fonts    # Compile Korean resume"
+            echo "  typst compile src/en.typ --font-path fonts    # Compile English resume"
+            echo "  typst watch src/ko.typ --font-path fonts      # Watch Korean resume"
+            echo "  typst watch src/en.typ --font-path fonts      # Watch English resume"
             echo ""
             echo "Build commands:"
             echo "  nix build .#korean    # Build Korean resume"
@@ -44,7 +44,7 @@
             buildInputs = with pkgs; [ typst ];
 
             buildPhase = ''
-              typst compile ko/main.typ --font-path fonts --root . resume-ko.pdf
+              typst compile src/ko.typ --font-path fonts --root . resume-ko.pdf
             '';
 
             installPhase = ''
@@ -61,7 +61,7 @@
             buildInputs = with pkgs; [ typst ];
 
             buildPhase = ''
-              typst compile en/main.typ --font-path fonts --root . resume-en.pdf
+              typst compile src/en.typ --font-path fonts --root . resume-en.pdf
             '';
 
             installPhase = ''
@@ -78,8 +78,8 @@
             buildInputs = with pkgs; [ typst ];
 
             buildPhase = ''
-              typst compile ko/main.typ --font-path fonts --root . resume-ko.pdf
-              typst compile en/main.typ --font-path fonts --root . resume-en.pdf
+              typst compile src/ko.typ --font-path fonts --root . resume-ko.pdf
+              typst compile src/en.typ --font-path fonts --root . resume-en.pdf
             '';
 
             installPhase = ''

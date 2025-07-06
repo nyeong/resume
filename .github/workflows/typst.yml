@@ -18,10 +18,10 @@ jobs:
         uses: typst-community/setup-typst@v3
 
       - name: Build Korean Resume
-        run: typst compile ko/main.typ --font-path fonts resume-ko.pdf
+        run: typst compile src/ko.typ --font-path fonts --root . resume-ko.pdf
 
       - name: Build English Resume  
-        run: typst compile en/main.typ --font-path fonts resume-en.pdf
+        run: typst compile src/en.typ --font-path fonts --root . resume-en.pdf
 
       - name: Upload PDF files
         uses: actions/upload-artifact@v4
